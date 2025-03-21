@@ -1,0 +1,327 @@
+.address-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 4%;
+    padding-bottom: 3%;
+    padding-left: 6%;
+    padding-right: 6%;
+    gap: 5%;
+}
+
+.address-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.address-add-btn-cont {
+    padding-left: 11px;
+    padding-right: 12px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    background-color: #8B7541;
+    border-radius: 25px;
+    margin-bottom: 6px;
+    margin-top: 4px;
+    border: 1px solid white;
+
+    .add-address-btn {
+        color: white;
+    }
+}
+
+.add-address {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    height: 56px;
+    background-color: #8B7541;
+    color: white;
+    /* padding: 2%; */
+    padding-left: 25px;
+    padding-right: 34px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 30px;
+
+    h3 {
+        font-size: 22px;
+        font-weight: 400;
+        margin-bottom: 0px;
+        margin-top: 9px;
+    }
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+    gap: 40px;
+    margin-bottom: 50px;
+    margin-top: 45px;
+}
+
+.review-card {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.add-address-container {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    background-color: #F7F7F7;
+    border-radius: 10px;
+    margin-bottom: 0px;
+}
+
+.select-address-head-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.change-btn {
+    background-color: #dd0c0c;
+    color: #ffffff;
+    border: none;
+    padding: 3px 15px;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 24px;
+    margin-top: 13px;
+    border: 1px solid #454545;
+
+    // background-color: #ffffff;
+    // color: #454545;
+    // border: none;
+    // padding: 3px 15px;
+    // border-radius: 25px;
+    // font-size: 14px;
+    // cursor: pointer;
+    // margin-bottom: 24px;
+    // margin-top: 13px;
+    // margin-right: 15px;
+    // border: 1px solid #454545;
+}
+
+.change-btn:hover {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.select-address-line {
+    margin-top: 0px;
+    margin-bottom: 25px;
+}
+
+.select-address {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    height: 28%;
+}
+
+.address-select-btn-cont {
+    padding-left: 13px;
+    padding-right: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #8B7541;
+    border-radius: 25px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 25px;
+    height: 50px;
+
+    .add-address-btn {
+        color: white;
+    }
+}
+
+.select-address-description {
+    padding-left: 10px;
+    padding-right: 48px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.edit-btn {
+    background-color: #ffffff;
+    color: #454545;
+    border: none;
+    padding: 3px 15px;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 24px;
+    margin-top: 13px;
+    margin-right: 15px;
+    border: 1px solid #454545;
+}
+
+.edit-btn:hover {
+    background-color: #6d5a2d;
+    color: #fff;
+}
+
+.empty-address {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.toggle-switch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin-top: 25px;
+}
+
+.toggle-switch input[type="checkbox"] {
+    display: none;
+}
+
+.toggle-switch .slider {
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 34px;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-switch .slider::before {
+    content: "";
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.toggle-switch input:checked+.slider {
+    background-color: #8B7541;
+}
+
+.toggle-switch input:checked+.slider::before {
+    transform: translateX(20px);
+}
+
+.toggle-switch .label-text {
+    margin-left: 8px;
+}
+
+
+
+@media (max-width: 1000px) {
+    .address-container {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .reviews-grid {
+        grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
+        gap: 30px;
+    }
+
+    .select-address-description {
+        font-size: 18px;
+        padding-right: 20px;
+    }
+
+    .add-address {
+        padding-left: 20px;
+        padding-right: 25px;
+    }
+
+    .change-btn,
+    .edit-btn {
+        font-size: 12px;
+        padding: 3px 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .address-container {
+        padding-left: 2%;
+        padding-right: 2%;
+        gap: 3%;
+    }
+
+    .address-head {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .add-address {
+        width: 57%;
+        justify-content: center;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .review-card {
+        padding: 15px;
+    }
+
+    .add-address-container {
+        padding: 10px;
+    }
+
+    .select-address {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .select-address-description {
+        font-size: 16px;
+        padding-right: 10px;
+    }
+
+    .change-btn,
+    .edit-btn {
+        font-size: 12px;
+        padding: 3px 10px;
+        margin-bottom: 10px;
+    }
+
+    .address-select-btn-cont {
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .address-add-btn-cont {
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 6px;
+        padding-bottom: 0px;
+        background-color: #161E4D;
+        border-radius: 25px;
+        margin-bottom: 6px;
+        margin-top: 4px;
+        border: 1px solid white;
+    }
+}

@@ -1,0 +1,131 @@
+/* Container and heading styles */
+.most-sold-product-container {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 4%;
+    padding-right: 4%;
+    font-family: Arial, sans-serif;
+}
+
+.products-heading {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* Grid layout for products */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 50px;
+    align-items: start;
+}
+
+/* Product card styles */
+.product-card {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styles */
+.product-image {
+    width: 100%;
+    height: 320px;
+    object-fit: contain;
+    margin-bottom: 16px;
+}
+
+/* Product info */
+.product-info {
+    margin-bottom: 0px;
+}
+
+.product-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.product-description {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.product-price {
+    font-size: 20px;
+    color: #EC2329;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.product-delivery {
+    font-size: 14px;
+    color: green;
+    margin-bottom: 5px;
+}
+
+.free-delivery {
+    font-weight: bold;
+}
+
+/* Rating styles */
+.product-rating {
+    display: flex;
+    font-size: 14px;
+    margin-bottom: 10px;
+    /* margin-top: 10px; */
+    width: 70px;
+    height: 30px;
+    border: 1px solid #cdcdcd;
+    border-radius: 20px;
+    text-align: center;
+    justify-content: center;
+    padding-top: 3px;
+    padding-right: 8px;
+    background-color: #f5f5f5;
+}
+
+/* Button styles */
+.add-to-cart-btn {
+    position: absolute;
+    bottom: 29%;
+    right: 16px;
+    background-color: white;
+    color: #EC2329;
+    border: 1px solid #EC2329;
+    border-radius: 25%;
+    width: 60px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #EC2329;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Cart icon */
+.cart-icon {
+    font-size: 18px;
+}

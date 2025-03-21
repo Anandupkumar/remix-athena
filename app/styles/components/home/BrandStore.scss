@@ -1,0 +1,217 @@
+// /* Container and heading styles */
+// .brands-container {
+//     padding-top: 3%;
+//     padding-bottom: 3%;
+//     padding-left: 4%;
+//     padding-right: 4%;
+//     font-family: Arial, sans-serif;
+//     background-color: #ffffff;
+// }
+
+// .brands-heading {
+//     font-size: 24px;
+//     font-weight: bold;
+//     text-align: left;
+//     margin-bottom: 20px;
+//     color: #000;
+// }
+
+// /* Grid layout for brand cards */
+// .brands-grid {
+//     display: grid;
+//     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+//     gap: 35px;
+// }
+
+// /* Card styles */
+// .brand-card {
+//     // display: flex;
+//     // border: 1px solid #ddd;
+//     // border-radius: 8px;
+//     // background-color: #F7F7F7;
+//     // overflow: hidden;
+//     // transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+//     display: flex;
+//     flex-direction: row;
+//     border: 1px solid #ddd;
+//     border-radius: 15px;
+//     background-color: #f9f9f9;
+//     overflow: hidden;
+//     transition: transform 0.3s ease, box-shadow 0.3s ease;
+//     min-height: 150px;
+// }
+
+// .brand-card:hover {
+//     transform: translateY(-5px);
+//     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+// }
+
+// /* Logo section */
+// .brand-logo {
+//     background-color: #161E4D;
+//     padding: 10px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+// .brand-logo img {
+//     max-width: 100%;
+//     max-height: 100px;
+//     object-fit: contain;
+// }
+
+// /* Brand details */
+// .brand-details {
+//     padding: 16px;
+//     flex: 1;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+// }
+
+// .brand-name {
+//     font-size: 100%;
+//     font-weight: bold;
+//     margin-bottom: 8px;
+//     color: #615F5F;
+// }
+
+// .brand-description {
+//     font-size: 14px;
+//     color: #555;
+//     margin-bottom: 10px;
+// }
+
+// .brand-link {
+//     font-size: 18px;
+//     font-weight: bold;
+//     color: #0E77D8;
+//     text-decoration: underline;
+// }
+
+// .brand-link:hover {
+//     text-decoration: underline;
+// }
+
+
+.brands-container {
+    padding: 3% 4%;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+.brands-heading {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.brands-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27%, 1fr));
+    gap: 20px;
+}
+
+.brand-card {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 150px;
+}
+
+.brand-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.brand-logo {
+    background-color: #161E4D;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-logo img {
+    max-width: 100%;
+    max-height: 100px;
+    object-fit: contain;
+}
+
+.brand-details {
+    padding: 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.brand-name {
+    font-size: 100%;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #615F5F;
+}
+
+.brand-link {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0E77D8;
+    text-decoration: underline;
+}
+
+.brand-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    // .brands-grid {
+    //     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    //     gap: 15px;
+    // }
+
+    .brand-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .brand-logo {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .brands-heading {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .brands-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .brand-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .brand-details {
+        padding: 10px;
+    }
+
+    .brand-link {
+        font-size: 16px;
+    }
+}

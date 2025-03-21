@@ -1,0 +1,272 @@
+body{
+    background-color: #D9DADF;
+}
+
+/* General Styles */
+.row {
+    margin: 10px;
+    padding: 10px;
+}
+
+/* Container 1 (Logo Section) */
+.container1 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    height: 93vh;
+}
+
+.logo-container {
+    position: relative;
+    top: 35px;
+    /* left: -26px; */
+    right: 400px;
+}
+
+.logo {
+    width: 125px;
+}
+
+/* Container 2 (Form Section) */
+.container2 {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 93vh;
+}
+
+.icon-container {
+    position: relative;
+    top: 27px;
+    left: 80px;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.title-discription-container {
+
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.input-group {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.country-code {
+    width: 20%;
+    font-size: 16px;
+    color: #666;
+    padding: 10px 15px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-top-right-radius: 44;
+    border-bottom-right-radius: 30;
+    border: 1px solid #878787;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.input {
+    width: 80%;
+    border: 1px solid #878787;
+    border-radius: 25px;
+    padding: 10px 15px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    outline: none;
+    background-color: #D9DADF;
+}
+
+/* Button Styles */
+.button {
+    width: 100%;
+    padding: 12px 0;
+    background-color: #8B7541;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.button:hover {
+    background-color: #645229;
+}
+
+.button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.divider {
+    // margin: 20px 0;
+    font-size: 18px;
+    color: #474747;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+/* Skip button */
+.skip-button {
+    background: none;
+    border: none;
+    color: #8B7541;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.skip-button:hover {
+    text-decoration: underline;
+}
+
+.logoLogin {
+    width: 100%;
+}
+
+/* Responsive Media Queries */
+
+/* Mobile Devices (Portrait) */
+@media (max-width: 600px) {
+    .col-6 {
+        width: 100%;
+    }
+
+    .container1,
+    .container2 {
+        justify-content: center;
+        height: auto;
+        padding: 20px;
+    }
+
+    .icon-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .logoLogin {
+        width: 70%;
+    }
+
+    .form-container {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+
+    .input-group {
+        display: flex;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .country-code {
+        width: 20%;
+        font-size: 16px;
+        color: #666;
+        padding: 10px 15px;
+        font-size: 16px;
+        margin-bottom: 20px;
+        border-top-right-radius: 44;
+        border-bottom-right-radius: 30;
+        border: 1px solid #ccc;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+    }
+
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 1250px) {
+
+    .col-6 {
+        width: 100%;
+    }
+
+    .container1,
+    .container2 {
+        justify-content: center;
+        height: auto;
+        padding: 20px;
+    }
+
+    .icon-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .logoLogin {
+        width: 50%;
+    }
+
+    .form-container {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .input-group {
+        display: flex;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .country-code {
+        width: 20%;
+        font-size: 16px;
+        color: #666;
+        padding: 10px 15px;
+        font-size: 16px;
+        margin-bottom: 20px;
+        border-top-right-radius: 44;
+        border-bottom-right-radius: 30;
+        border: 1px solid #ccc;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+    }
+
+}
+
+/* Large Screens */
+@media (min-width: 1250px) {
+    .container1 {
+        justify-content: end;
+    }
+
+    .container2 {
+        justify-content: start;
+    }
+
+    .form-container {
+        margin-left: 28%;
+    }
+
+    .input-group {
+        flex-direction: row;
+    }
+
+    .country-code {
+        width: 20%;
+    }
+
+    .input {
+        width: 80%;
+    }
+}

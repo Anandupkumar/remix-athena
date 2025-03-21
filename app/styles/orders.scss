@@ -1,0 +1,159 @@
+.address-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 4%;
+    padding-bottom: 3%;
+    padding-left: 6%;
+    padding-right: 6%;
+    gap: 5%;
+}
+
+.address-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+    gap: 40px;
+    margin-bottom: 50px;
+    margin-top: 45px;
+}
+
+.review-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F7F7F7;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.item-image {
+    width: 20%;
+    height: 76%;
+    object-fit: contain;
+}
+
+
+.item-details {
+    flex: 1;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.item-details h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.item-size {
+    color: #666;
+    font-size: 17px;
+    margin-bottom: 1px;
+}
+
+.item-rating {
+    font-size: 25px;
+    color: #ffa500;
+    margin-bottom: 5px;
+}
+
+.reviews {
+    color: #666;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.item-price {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.item-actions {
+    display: flex;
+    gap: 70px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-delivery {
+    color: #7b7b7b;
+    font-size: 15px;
+}
+
+
+.empty-address {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+@media (max-width: 1000px) {
+    .reviews-grid {
+        grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .item-image {
+        width: 80%;
+        max-width: 200px;
+        height: auto;
+    }
+
+    .item-actions {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .address-container {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .item-image {
+        width: 100%;
+        max-width: 180px;
+        height: auto;
+    }
+
+    .item-details {
+        text-align: center;
+    }
+
+    .item-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+}

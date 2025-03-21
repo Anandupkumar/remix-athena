@@ -1,0 +1,84 @@
+/* Container and heading styles */
+.boost-container {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 4%;
+    padding-right: 4%;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+.boost-heading {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+/* Grid layout for cards */
+.boost-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Card styles */
+.boost-card {
+    position: relative;
+    background-color: #EAFAFF;
+    // border: 1px solid #ddd;
+    // border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    // box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    // transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+// .boost-card:hover {
+//     transform: translateY(-5px);
+//     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+// }
+
+/* Image styles */
+.boost-image {
+    border-radius: 8px;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.boost-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Offer label */
+.offer-label {
+    position: absolute;
+    top: 45%;
+    left: 42%;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    /* padding: 8px 30px; */
+    border-radius: 4px;
+}
+
+/* Text content */
+.boost-info {
+    padding: 16px;
+}
+
+.boost-discount {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.boost-category {
+    font-size: 14px;
+    color: #555;
+}

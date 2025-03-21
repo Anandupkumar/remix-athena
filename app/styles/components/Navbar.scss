@@ -1,0 +1,227 @@
+.top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 40px;
+    background-color: #1D1D1D;
+    // border-bottom: 1px solid #ccc;
+
+    .search-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        background-color: #1D1D1D;
+
+        .logo {
+            height: 13vh;
+            margin-right: 0%;
+            margin-left: 27%;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+        }
+
+        .search-button {
+            background-color: #00274d;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+
+            i {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .user-actions {
+        display: flex;
+        gap: 25px;
+
+        .action-item {
+            font-size: 17px;
+            color: #ffffff;
+            cursor: pointer;
+            margin-top: 7px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.bottom-header {
+    background-color: #1D1D1D;
+    color: #ffffff;
+    padding: 10px 0;
+    position: relative;
+
+    .menu-icon {
+        display: none;
+        font-size: 25px;
+        color: #ffffff;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: center;
+        gap: 70px;
+        list-style: none;
+        transition: max-height 0.3s ease-in-out;
+        margin-bottom: 3px;
+
+        li {
+            font-size: 20px;
+            cursor: pointer;
+            position: relative;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            i {
+                font-size: 18px;
+                margin-left: 5px;
+            }
+        }
+    }
+}
+
+.login-signup-cont {
+    padding: 5px 10px;
+    border: 1px solid #8B7541;
+    background-color: #8B7541;
+    border-radius: 10px;
+}
+
+
+/* Tablets (Max Width: 1200px) */
+@media (max-width: 1200px) {
+    .top-header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+
+        .search-container {
+            width: 90%;
+
+            .logo {
+                height: 10vh;
+            }
+
+            .search-input {
+                font-size: 14px;
+            }
+
+            .search-button {
+                padding: 8px 15px;
+            }
+        }
+
+        .user-actions {
+            gap: 15px;
+            margin-top: 1px;
+
+            .action-item {
+                font-size: 15px;
+            }
+        }
+    }
+
+    .bottom-header .nav-links {
+        gap: 15px;
+
+        li {
+            font-size: 15px;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .bottom-header {
+        height: 7vh;
+    }
+}
+
+/* Mobile Devices (Max Width: 600px) */
+@media (max-width: 600px) {
+    .top-header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+
+        .search-container {
+            flex-direction: column;
+            width: 100%;
+
+            .logo {
+                height: 8vh;
+            }
+
+            .search-input {
+                width: 85%;
+                margin-bottom: 5px;
+            }
+
+            .search-button {
+                width: 85%;
+            }
+        }
+
+        .user-actions {
+            flex-direction: row;
+            justify-content: center;
+            gap: 10px;
+
+            .action-item {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .bottom-header {
+        padding: 10px 20px;
+
+        .menu-icon {
+            display: block;
+        }
+
+        .nav-links {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            background-color: #00274d;
+            width: 100%;
+            max-height: 0;
+            overflow: hidden;
+            z-index: 9;
+        }
+
+        .nav-links.active {
+            max-height: 450px;
+            z-index: 9;
+        }
+
+        .nav-links li {
+            font-size: 16px;
+            padding: 10px 0;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

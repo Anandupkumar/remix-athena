@@ -1,0 +1,162 @@
+body{
+    background-color: #D9DADF;
+}
+
+.otp-page {
+    font-family: Arial, sans-serif;
+
+    .logo-container {
+        margin-bottom: 0%;
+        margin-top: 2%;
+        margin-left: 2%;
+
+        .logo {
+            width: 10%;
+        }
+    }
+
+    .form-container {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 65px;
+        }
+
+        .otp-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 20%;
+
+            .otp-inputs {
+                display: flex;
+                justify-content: center;
+                gap: 10%;
+                margin-bottom: 60px;
+
+                .otp-input {
+                    width: 65px;
+                    height: 60px;
+                    text-align: center;
+                    font-size: 18px;
+                    border: 1px solid #898989;
+                    border-radius: 10%;
+                    background-color: #D9DADF
+                }
+            }
+
+            .submit-button {
+                background-color: #8B7541;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 25px;
+                cursor: pointer;
+                font-size: 18px;
+                width: 100%;
+                margin-bottom: 20px;
+
+                &:hover {
+                    background-color: #745f2f;
+                }
+            }
+        }
+
+        .divider {
+            font-size: 18px;
+            color: #474747;
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+
+        .skip-login {
+            background: none;
+            border: none;
+            color: #8B7541;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 1300px) {
+
+    .otp-page .logo-container {
+        margin-bottom: 5%;
+    }
+
+}
+
+/* Mobile Devices (Portrait) */
+
+@media (max-width: 600px) {
+
+    .otp-page .logo-container {
+        margin-bottom: 11%;
+        margin-top: 10%;
+        text-align: center;
+    }
+
+    .otp-page .logo-container .logo {
+        width: 55%;
+    }
+
+    .otp-page .form-container .title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 40px;
+    }
+
+    .otp-page .form-container .otp-form .otp-inputs {
+        display: flex;
+        justify-content: center;
+        gap: 8%;
+        margin-bottom: 60px;
+    }
+
+    .otp-page .form-container .otp-form .otp-inputs .otp-input {
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        font-size: 18px;
+        border: 1px solid #898989;
+        border-radius: 10%;
+    }
+
+    .otp-page .form-container .otp-form .submit-button {
+        background-color: #EC2329;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 18px;
+        width: 200px;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+.username {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15%;
+}
