@@ -184,8 +184,11 @@ function ProductList({ swal }) {
                 </div> */}
                 <div className="row product-heading">
                     <h1 className="product-head">
-                        PRODUCTS
+                        ALL PERFUME
                     </h1>
+                    <p className="prod-desc">
+                        Discover our full collection of exquisite fragrances. From floral to woody, find the perfect scent that defines your style and personality.
+                    </p>
                 </div>
 
                 {productList.length > 0 ? (

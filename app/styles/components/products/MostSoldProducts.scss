@@ -7,7 +7,7 @@
 /* Product heading */
 .product-heading {
     text-align: center;
-    margin: 2px 0 45px;
+    margin: 2px 0 65px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -124,6 +124,12 @@
     text-transform: uppercase !important;
 }
 
+.prod-desc {
+    font-size: 25px;
+    color: #737373;
+    margin-bottom: 0px;
+    padding: 10px 345px;
+}
 
 
 /* For screens up to 1000px */
@@ -203,5 +209,12 @@
         width: 45px;
         height: 45px;
         font-size: 16px;
+    }
+
+    .prod-desc {
+        font-size: 16px;
+        color: #737373;
+        margin-bottom: 0px;
+        padding: 10px 24px;
     }
 }
