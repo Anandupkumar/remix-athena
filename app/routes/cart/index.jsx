@@ -8,6 +8,8 @@ import { useState, useEffect } from "react";
 import { Outlet, useNavigate } from "@remix-run/react";
 import { getCartData, getAddressData, deleteFromCart, updateCartQty, createNewOrder } from "../../utils/api";
 import { withSwal } from 'react-sweetalert2';
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 // export const meta: MetaFunction = () => {
 //   return [
 //     { title: "New Remix App" },
@@ -32,6 +34,7 @@ function Cart({ swal }) {
     const [defaultAddress, setDefaultAddress] = useState({})
     const [qtyLoading, setQtyLoading] = useState(false);
     const [selectedMethod, setSelectedMethod] = useState("COD");
+    const [showSkeleton, setShowSkeleton] = useState(false);
     const [cartItems, setCartItems] = useState([
         // {
         //     product_id: 1,
@@ -73,6 +76,7 @@ function Cart({ swal }) {
     }, []);
 
     const fetchCartData = async () => {
+        setShowSkeleton(true);
         const isVerified = localStorage.getItem("authToken");
 
         if (isVerified && isVerified !== "") {
@@ -83,8 +87,11 @@ function Cart({ swal }) {
                 const addressRes = await getAddressData();
 
                 if (res) {
+                    setShowSkeleton(false);
                     setCartItems(res.cart_data);
                     setMiscData(res.misc);
+                } else {
+                    setShowSkeleton(false);
                 }
 
                 if (addressRes && Array.isArray(addressRes)) {
@@ -97,6 +104,7 @@ function Cart({ swal }) {
                 }
             } catch (error) {
                 console.error("Error fetching data:", error);
+                setShowSkeleton(false);
             }
         } else {
             navigate("/");
@@ -214,16 +222,17 @@ function Cart({ swal }) {
                 setBuyButtonContent("MAKE PAYMENT");
             } else if (showAddress && showSelectAddress && buyButtonContent === 'MAKE PAYMENT') {
                 // console.log(cartItems);
-                
+
                 const orderData = {
                     address_id: Number(defaultAddress.id),
                     flow_path: "cart",
-                    product_id: cartItems.length === 1 ? `${cartItems[0].product_id}` : "",
+                    // product_id: cartItems.length === 1 ? `${cartItems[0].product_id}` : "",
+                    product_id: "",
                     coupon_state_token: "",
                     payment_method: `${selectedMethod}`,
                     referred_by: ""
                 };
-                
+
                 const res = await createNewOrder(orderData);
                 console.log(res);
                 if (res && res?.data?.order_status) {
@@ -237,7 +246,7 @@ function Cart({ swal }) {
                         window.location.reload();
                     });
                 }
-                
+
             } else {
                 setBuyButtonContent("PROCEED");
             }
@@ -305,6 +314,8 @@ function Cart({ swal }) {
                                         </div>
                                     ))}
                                 </>
+                            ) : showSkeleton ? (
+                                <Skeleton count={10} />
                             ) : (
                                 <div className="empty-cart">
                                     <h4 className="empty-cart-label">
@@ -449,13 +460,14 @@ function Cart({ swal }) {
                         <p className="order-placed-text">Your delivery is on its way and will be arriving soon!</p>
                         <button onClick={handleRedirectToProducts} className="order-placed-btn" >BACK TO SHOPPING</button>
                     </div>
-                )}
-            </div>
+                )
+                }
+            </div >
             {/* <Outlet /> */}
-            <div className="products-footer">
+            < div className="products-footer" >
                 <Footer />
-            </div>
-        </div>
+            </div >
+        </div >
     );
 }
 

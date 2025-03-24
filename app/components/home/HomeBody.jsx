@@ -84,14 +84,12 @@ export default function HomeBody() {
                             <div className="image-container" key={index}>
                                 <img src={slider.image_path} />
                                 {/* <img src="/perfume-main.png" /> */}
-                                <p className="legend">Experience the Essence of Elegance
-                                    {/* <br /> */}
-                                    {/* <span className="desc-last-word"> construction </span> */}
+                                {/* <p className="legend">Experience the Essence of Elegance
                                 </p>
                                 <p className="legend-desc">
                                     Discover exquisite fragrances crafted to captivate your senses. Unveil your signature scent with Athena
                                 </p>
-                                <button className="shop-now-btn">Explore Our Collection</button>
+                                <button className="shop-now-btn">Explore Our Collection</button> */}
                             </div>
                         ))}
 
