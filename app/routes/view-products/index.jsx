@@ -34,6 +34,7 @@ function ProductsView({ swal }) {
             try {
                 const productsData = await getProductDetails(id);
                 if (productsData) {
+
                     setProductDetails(productsData[0]);
                     setShowSkeleton(false);
                 } else {
@@ -87,9 +88,11 @@ function ProductsView({ swal }) {
         name: "Greenstone's AAC Brick",
         dimensions: "600mmX200mmX100mm",
         price: 38,
+        selling_price: 30,
         description:
             "Being Light Weight AAC Blocks provides excellent resistance to earthquake forces. Long Lasting AAC Blocks are strong to water damage as compared to other construction materials. They can even withstand in any climatic conditions, this in turn gives you increased value for your investment. Environment Friendly Energy consumed in the production process of AAC is only a fraction compared to the production of other Building material. The Manufacturing process emits no pollutants and creates no by-products or toxic natural raw material. The finished product is thrice the volume of the raw material used, making it extremely resource-efficient and environment friendly. Workability Extremely Light : AAC is upto 3-4 times lighter than traditional concrete, representing great advantages in transportation and material handling.",
         reviews: 18,
+        highlight: [],
         star_value: 5,
         image_paths: [
             "/prod-list1.jpeg",
@@ -161,27 +164,35 @@ function ProductsView({ swal }) {
                             <h1 className="product-title">{productDetails.name}</h1>
                             <p className="product-dimensions">{productDetails.dimensions}</p>
 
-                            <div className="rating-reviews">
+                            {/* <div className="rating-reviews">
                                 <div className="rating">
                                     {Array.from({ length: Math.floor(Number(productDetails.star_value) || 0) }).map((_, i) => (
                                         <span key={i} className="star">★</span>
                                     ))}
                                 </div>
                                 <p className="reviews">({productDetails.star_value || 0} Reviews)</p>
-                            </div>
+                            </div> */}
 
 
                             <div className="price-quantity-container">
-                                <p className="price">₹{productDetails.price}.00</p>
-
+                                <p className="price">₹{productDetails.selling_price}.00</p>
+                                <p className="org-price">₹{productDetails.price}.00</p>
 
                             </div>
 
-                            <div className="quantity-selector">
+                            <div className="offer-price-lbl">
+                                <p>Offer Price</p>
+                            </div>
+
+                            <button className="add-to-cart-btn" onClick={handleAddToCart}>ADD TO CART
+                                <i className="fa-solid fa-cart-shopping" style={{ marginLeft: "5px" }} />
+                            </button>
+
+                            {/* <div className="quantity-selector">
                                 <button className="quantity-btn">-</button>
                                 <span className="quantity-value">1</span>
                                 <button className="quantity-btn">+</button>
-                            </div>
+                            </div> */}
 
                             <div className="description">
                                 <h2>Description</h2>
@@ -189,13 +200,27 @@ function ProductsView({ swal }) {
                                 <div dangerouslySetInnerHTML={{ __html: productDetails.description }} />
                             </div>
 
-                            <button className="add-to-cart-btn" onClick={handleAddToCart}>ADD TO CART
-                                <i className="fa-solid fa-cart-shopping" style={{ marginLeft: "5px" }} />
-                            </button>
+                            <div className="description">
+                                <h2>Highlights</h2>
+                                {productDetails.highlight?.map((item, index) => (
+                                    <p key={index}>{item}</p>
+                                ))}
+                                {/* <p>{product.highlight[0]}</p> */}
+                            </div>
+
+                            <div className="description">
+                                <h2>More Details</h2>
+                                {productDetails.highlight?.map((item, index) => (
+                                    <p key={index}>{item}</p>
+                                ))}
+                                {/* <p>{product.highlight[0]}</p> */}
+                            </div>
+
                         </div>
                     </div>
 
-                    <div className="reviews-section">
+                    {/* Review */}
+                    {/* <div className="reviews-section">
                         <h2 className="reviews-title">REVIEWS</h2>
                         <p className="reviews-subtitle">
                             See what our customers are saying. Explore real experiences and find out why our materials are loved by so many.
@@ -223,7 +248,7 @@ function ProductsView({ swal }) {
                         </div>
 
                         <button className="view-all-btn">View All</button>
-                    </div>
+                    </div> */}
                 </>
             ) : (
                 <Skeleton count={20} />

@@ -1,4 +1,4 @@
-import "../../styles/components/home/HomeNavbar.scss";
+import "../styles/components/Navbar.scss";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { useNavigate } from "@remix-run/react";
 import { useState, useEffect } from "react";
@@ -39,6 +39,10 @@ export default function HomeNavbar() {
         navigate("/categories")
     }
 
+    const handleRedirectToHome = () => {
+        navigate("/");
+    }
+
     return (
         <div>
             <div className="top-header">
@@ -65,7 +69,7 @@ export default function HomeNavbar() {
                     </button> */}
                 </div>
 
-                <div className="user-actions">
+                {/* <div className="user-actions">
                     {authToken ?
                         <span onClick={handleRedirectToProfile} className="action-item">
                             <i className="fas fa-user" />
@@ -73,16 +77,14 @@ export default function HomeNavbar() {
                         </span>
                         : <div className="login-signup-cont">
                             <span onClick={handleRedirectToLogin} className="action-item">
-                                {/* <i className="fas fa-user" /> */}
+        
                                 Login/Signup
                             </span>
                         </div>
                     }
 
-                    {authToken &&
-                        <span onClick={handleRedirectToCart} className="action-item"><i className="fas fa-cart-shopping" /> Cart</span>
-                    }
-                </div>
+                    <span onClick={handleRedirectToCart} className="action-item"><i className="fas fa-cart-shopping" /> Cart</span>
+                </div> */}
 
             </div>
 
@@ -95,10 +97,9 @@ export default function HomeNavbar() {
                         : <i className="fa-solid fa-bars" />}
                 </div>
                 <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-                    <li>Home</li>
+                    <li onClick={handleRedirectToHome}>Home</li>
                     <li onClick={handleRedirectToCategory}>
-                        Category
-                        {/* <i className="fas fa-chevron-down" /> */}
+                        Category <i className="fas fa-chevron-down" />
                     </li>
                     <li>Offers</li>
                     <li>Why Athena</li>
