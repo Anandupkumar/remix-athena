@@ -46,10 +46,10 @@ export default function ProfileSetup() {
 
     return (
         <div className="otp-page">
-            <div className="logo-container">
+            <div className="logo-container-otp">
                 <img src="/athena-logo.png" alt="Logo" className="logo" />
             </div>
-            <div className="form-container">
+            <div className="form-container-otp">
                 <h1 className="title">What do we call you ?</h1>
                 <form className="otp-form" onSubmit={handleSubmit}>
         
