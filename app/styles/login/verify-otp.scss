@@ -5,7 +5,7 @@ body{
 .otp-page {
     font-family: Arial, sans-serif;
 
-    .logo-container {
+    .logo-container-otp {
         margin-bottom: 0%;
         margin-top: 2%;
         margin-left: 2%;
@@ -15,7 +15,7 @@ body{
         }
     }
 
-    .form-container {
+    .form-container-otp {
 
         display: flex;
         flex-direction: column;
@@ -95,7 +95,7 @@ body{
 /* Tablets */
 @media (min-width: 601px) and (max-width: 1300px) {
 
-    .otp-page .logo-container {
+    .otp-page .logo-container-otp {
         margin-bottom: 5%;
     }
 
@@ -105,30 +105,30 @@ body{
 
 @media (max-width: 600px) {
 
-    .otp-page .logo-container {
+    .otp-page .logo-container-otp {
         margin-bottom: 11%;
         margin-top: 10%;
         text-align: center;
     }
 
-    .otp-page .logo-container .logo {
+    .otp-page .logo-container-otp .logo {
         width: 55%;
     }
 
-    .otp-page .form-container .title {
+    .otp-page .form-container-otp .title {
         font-size: 24px;
         font-weight: bold;
         margin-bottom: 40px;
     }
 
-    .otp-page .form-container .otp-form .otp-inputs {
+    .otp-page .form-container-otp .otp-form .otp-inputs {
         display: flex;
         justify-content: center;
         gap: 8%;
         margin-bottom: 60px;
     }
 
-    .otp-page .form-container .otp-form .otp-inputs .otp-input {
+    .otp-page .form-container-otp .otp-form .otp-inputs .otp-input {
         width: 40px;
         height: 40px;
         text-align: center;
@@ -137,7 +137,7 @@ body{
         border-radius: 10%;
     }
 
-    .otp-page .form-container .otp-form .submit-button {
+    .otp-page .form-container-otp .otp-form .submit-button {
         background-color: #8B7541;
         color: #fff;
         padding: 10px 20px;

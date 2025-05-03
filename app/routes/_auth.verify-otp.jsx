@@ -72,7 +72,8 @@ export default function VerifyOTP() {
                 if (response.length !== 0) {
                     localStorage.setItem("authToken", response.token); // Store token
 
-                    navigate("/");
+                    // navigate("/");
+                    navigate("/profile"); 
                     // if (response.user_data.name === null) {
                     //     navigate("/profile"); 
                     // } else {
@@ -96,10 +97,10 @@ export default function VerifyOTP() {
 
     return (
         <div className="otp-page">
-            <div className="logo-container">
+            <div className="logo-container-otp">
                 <img src="/athena-logo.png" alt="Logo" className="logo" />
             </div>
-            <div className="form-container">
+            <div className="form-container-otp">
                 <h1 className="title">Verify OTP</h1>
                 <form className="otp-form" onSubmit={handleSubmit}>
                     <div className="otp-inputs">
