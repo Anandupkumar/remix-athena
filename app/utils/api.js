@@ -60,7 +60,7 @@ export async function verifyOTP(data) {
 }
 
 export async function setupProfile(data) {
-    const response = await apiRequest("/api/user/initital_profile_setup", "POST", data, {}, false);
+    const response = await apiRequest("/api/user/initital_profile_setup", "POST", data, {}, true);
     if (response?.status?.code === 200) {
         return response.data;
     } else {

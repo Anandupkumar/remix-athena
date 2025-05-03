@@ -193,9 +193,10 @@ function MyAccount({ swal }) {
                                                 <i className="fa-solid fa-user add-address-btn" />
                                             </span>
                                             <p className="select-address-description">
-                                                {(profileData.title !== null && profileData.name !== null) ?
+                                                {/* {(profileData.title !== null && profileData.name !== null) ?
                                                     (`${profileData.title}, ${profileData.name}`) : "NIL"
-                                                }
+                                                } */}
+                                                { profileData.name !== null ? (profileData.name) : "NIL" }
                                             </p>
                                         </div>
                                         <div className="select-address">
