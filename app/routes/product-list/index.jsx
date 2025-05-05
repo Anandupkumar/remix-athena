@@ -114,8 +114,8 @@ function ProductList({ swal }) {
         const fetchData = async () => {
             setShowSkeleton(true);
             try {
-                let brandId = "1";
-                const productsData = await getProductList(brandId);
+                // let brandId = "1";
+                const productsData = await getProductList(id);
 
                 if (productsData && Array.isArray(productsData)) {
                     setProductList(productsData);

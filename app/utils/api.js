@@ -209,7 +209,7 @@ export const getOrderDetailData = async (orderId, itemId) => {
 }
 
 export const getProductList = async (id) => {
-    const response = await apiRequest(`/api/products/brand/${id}`, "GET", null, {}, false);
+    const response = await apiRequest(`/api/products/category/${id}`, "GET", null, {}, false);
     if (response?.status?.code === 200) {
         return response.data;
     } else {

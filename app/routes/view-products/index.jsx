@@ -133,7 +133,7 @@ function ProductsView({ swal }) {
             </div>
             {!showSkeleton ? (
                 <>
-                    <div className="product-details">
+                    <div className="product-details-prod">
                         <div className="image-gallery">
                             {productDetails.image_paths?.length > 0 && typeof viewImage === "number" ? (
                                 <>
@@ -159,7 +159,7 @@ function ProductsView({ swal }) {
                             )}
                         </div>
 
-                        <div className="product-info ">
+                        <div className="product-info-prod ">
                             <span className="best-seller-label">{productDetails.condition}</span>
                             <h1 className="product-title">{productDetails.name}</h1>
                             <p className="product-dimensions">{productDetails.dimensions}</p>
@@ -184,7 +184,7 @@ function ProductsView({ swal }) {
                                 <p>Offer Price</p>
                             </div>
 
-                            <button className="add-to-cart-btn" onClick={handleAddToCart}>ADD TO CART
+                            <button className="add-to-cart-btn-prod" onClick={handleAddToCart}>ADD TO CART
                                 <i className="fa-solid fa-cart-shopping" style={{ marginLeft: "5px" }} />
                             </button>
 
@@ -208,13 +208,12 @@ function ProductsView({ swal }) {
                                 {/* <p>{product.highlight[0]}</p> */}
                             </div>
 
-                            <div className="description">
+                            {/* <div className="description">
                                 <h2>More Details</h2>
                                 {productDetails.highlight?.map((item, index) => (
                                     <p key={index}>{item}</p>
                                 ))}
-                                {/* <p>{product.highlight[0]}</p> */}
-                            </div>
+                            </div> */}
 
                         </div>
                     </div>

@@ -1,6 +1,6 @@
 // import type { MetaFunction } from "@remix-run/node";
 // import "../styles/home.scss";
-import "../../styles/categories.scss";
+import "../../styles/sub-categories.scss";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -64,7 +64,7 @@ export default function SubCategories() {
             <div className="products-navbar">
                 <Navbar />
             </div>
-            <div className="products-content-container">
+            <div className="products-content-container-subcategory">
                 <div>
                     <Breadcrumbs
                         items={[
@@ -73,8 +73,8 @@ export default function SubCategories() {
                             // { label: 'Products', path: '' }
                         ]}
                     />
-                    <div className="row product-heading">
-                        <h1 className="product-head">
+                    <div className="row product-heading-subcategory">
+                        <h1 className="product-head-subcategory">
                             {name}
                         </h1>
                         {/* <span className="heading-description">
@@ -86,11 +86,11 @@ export default function SubCategories() {
                 {subCategory.length > 0 ? (
                     <div className="row">
 
-                        <div className="categories-container">
+                        <div className="categories-container-subcategory">
                             {subCategory.map((category, index) => (
-                                <div className="category-card" key={index} onClick={() => handleRedirectToProductList(category)}>
-                                    <img src={category.image_path} alt={category.name} className="category-image" />
-                                    <div className="category-title">{category.name}</div>
+                                <div className="category-card-subcategory" key={index} onClick={() => handleRedirectToProductList(category)}>
+                                    <img src={category.image_path} alt={category.name} className="category-image-subcategory" />
+                                    <div className="category-title-subcategory">{category.name}</div>
                                 </div>
                             ))}
                         </div>

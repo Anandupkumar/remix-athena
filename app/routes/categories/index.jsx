@@ -58,9 +58,9 @@ export default function Categories() {
             <div className="products-navbar">
                 <Navbar />
             </div>
-            <div className="products-content-container">
-                <div className="row product-heading">
-                    <h1 className="product-head">
+            <div className="products-content-container-category">
+                <div className="row product-heading-category">
+                    <h1 className="product-head-category">
                         CATEGORIES
                     </h1>
                     {/* <span className="heading-description">
@@ -70,11 +70,11 @@ export default function Categories() {
                 {categoryCarousel.length > 0 ? (
                     <div className="row">
 
-                        <div className="categories-container">
+                        <div className="categories-container-category">
                             {categoryCarousel.map((category, index) => (
-                                <div className="category-card" key={index} onClick={() => handleRedirectToSubCategories(category)}>
-                                    <img src={category.image_path} alt={category.name} className="category-image" />
-                                    <div className="category-title">{category.name}</div>
+                                <div className="category-card-category" key={index} onClick={() => handleRedirectToSubCategories(category)}>
+                                    <img src={category.image_path} alt={category.name} className="category-image-category" />
+                                    <div className="category-title-category">{category.name}</div>
                                 </div>
                             ))}
                         </div>
